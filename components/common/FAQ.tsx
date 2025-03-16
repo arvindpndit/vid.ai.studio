@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { TITLE_GEN_FAQS as faqsList } from '@/utils/constants';
 
 interface Props {
   faqList: { question: string; answer: string }[];
@@ -17,7 +16,7 @@ const FAQ = ({ faqList }: Props) => {
         Frequently Asked Questions
       </h2>
       <Accordion type="single" collapsible className="w-full px-2">
-        {faqsList.map((item) => {
+        {faqList.map((item) => {
           return (
             <AccordionItem key={item.question} value={item.question}>
               <AccordionTrigger>{item.question}</AccordionTrigger>

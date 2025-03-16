@@ -6,7 +6,7 @@ interface Props {
 
 const BestPractices = ({ bestPractices }: Props) => {
   return (
-    <div className="mx-auto max-w-6xl p-2 mt-16 text-white">
+    <div className="mx-auto max-w-6xl p-2 mt-20 text-white">
       {/* Header */}
       <h2 className="mb-6 text-center text-3xl font-bold">
         YouTube Title best practices:
@@ -17,7 +17,7 @@ const BestPractices = ({ bestPractices }: Props) => {
         {bestPractices.map((practice, index) => (
           <div
             key={index}
-            className="rounded-xl border border-transparent bg-[#0b0f19] p-6 text-center shadow-md transition-all hover:border-blue-950"
+            className="rounded-2xl border border-dashed border-gray-700 p-6 text-center shadow-md transition-all hover:border-purple-600"
           >
             <h3 className="mb-2 text-lg font-semibold">{practice.title}</h3>
             <p className="text-gray-400">{practice.description}</p>
