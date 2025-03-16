@@ -19,7 +19,7 @@ const FAQ = ({ faqList }: Props) => {
       <Accordion type="single" collapsible className="w-full px-2">
         {faqsList.map((item) => {
           return (
-            <AccordionItem value={item.question}>
+            <AccordionItem key={item.question} value={item.question}>
               <AccordionTrigger>{item.question}</AccordionTrigger>
               <AccordionContent>{item.answer}</AccordionContent>
             </AccordionItem>

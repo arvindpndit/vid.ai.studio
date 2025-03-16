@@ -68,3 +68,39 @@ export const TITLE_GEN_FAQS = [
   },
 ];
 
+export const AI_TOOLS_MENU_LIST = [
+  {
+    title: 'Title & Branding',
+    tools: [
+      { name: 'AI Title Generator', href: '/ai-title-generator' },
+      { name: 'Channel Name Generator', href: '/channel-name-generator' },
+    ],
+  },
+  {
+    title: 'Thumbnails & Visuals',
+    tools: [{ name: 'AI Thumbnail Maker', href: '/ai-thumbnail-maker' }],
+  },
+  {
+    title: 'Content Creation',
+    tools: [
+      { name: 'Content Generator', href: '/content-generator' },
+      { name: 'ChatGPT for YouTubers', href: '/chatgpt-for-youtubers' },
+      { name: 'YouTube Video Ideas', href: '/youtube-video-ideas' },
+    ],
+  },
+  {
+    title: 'SEO & Optimization',
+    tools: [
+      { name: 'Keyword Generator', href: '/keyword-generator' },
+      { name: 'YouTube Tag Generator', href: '/youtube-tag-generator' },
+    ],
+  },
+  {
+    title: 'Script & Description',
+    tools: [
+      { name: 'Video Script Generator', href: '/video-script-generator' },
+      { name: 'AI Description Generator', href: '/ai-description-generator' },
+    ],
+  },
+];
+
