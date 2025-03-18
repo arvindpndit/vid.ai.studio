@@ -316,3 +316,74 @@ export const KEYWORD_GEN_FAQS = [
   },
 ];
 
+export const TAG_GEN_HERO_SECTION = {
+  btn_text: '🚀 AI YouTube Tag Generator',
+  title: 'Boost discoverability with optimized video tags',
+  sub_title:
+    'Generate high-performing YouTube tags instantly using AI. Improve SEO, reach the right audience, and increase video visibility with relevant and trending keywords.',
+};
+
+export const TAG_GEN_INPUT_PLACEHOLDER =
+  'Enter your video topic or keywords...';
+
+export const TAG_GEN_BEST_PRACTICES = [
+  {
+    title: 'Use relevant keywords',
+    description:
+      'Select tags that accurately describe your content to improve search rankings and recommendations.',
+  },
+  {
+    title: 'Balance broad & specific tags',
+    description:
+      'Combine high-volume keywords with niche-specific tags to maximize discoverability.',
+  },
+  {
+    title: 'Analyze trending tags',
+    description:
+      'Stay ahead by incorporating trending tags related to your topic and audience interests.',
+  },
+  {
+    title: 'Avoid keyword stuffing',
+    description:
+      'Use meaningful tags instead of adding excessive or unrelated keywords, which can harm your ranking.',
+  },
+  {
+    title: 'Leverage competitor insights',
+    description:
+      'Analyze successful videos in your niche to find effective tags that can boost your visibility.',
+  },
+  {
+    title: 'Update tags strategically',
+    description:
+      'Refresh your tags based on performance data to keep your videos optimized over time.',
+  },
+];
+
+export const TAG_GEN_FAQS = [
+  {
+    question: 'What is the AI YouTube Tag Generator, and how does it help?',
+    answer:
+      'The AI YouTube Tag Generator analyzes your video topic and suggests optimized tags to improve search rankings, recommendations, and audience reach.',
+  },
+  {
+    question: 'How does the AI generate effective tags?',
+    answer:
+      'Our AI examines trending keywords, competitor strategies, and SEO best practices to create a balanced mix of broad and niche-specific tags.',
+  },
+  {
+    question: 'How many tags can I generate at once?',
+    answer:
+      'You can generate up to 10 optimized tags per search. Upgrade to Boost for unlimited generations and advanced tag insights.',
+  },
+  {
+    question: 'Can I use the AI Tag Generator on mobile and desktop?',
+    answer:
+      'Yes! The AI YouTube Tag Generator is accessible via our web app and the vidIQ browser extension for both desktop and mobile users.',
+  },
+  {
+    question: 'Why are optimized tags important for YouTube growth?',
+    answer:
+      'Well-chosen tags improve video SEO, help YouTube understand your content, and increase your chances of appearing in search results and suggested videos.',
+  },
+];
+
