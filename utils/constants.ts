@@ -175,3 +175,75 @@ export const CHANNEL_GEN_FAQS = [
   },
 ];
 
+export const VIDEO_IDEAS_GEN_HERO_SECTION = {
+  btn_text: '✨ AI YouTube Video Ideas Generator',
+  title: 'Fresh video concepts that inspire your content calendar',
+  sub_title:
+    'Generate creative YouTube video ideas that engage your audience, combining AI, trending topics analysis and content strategy best practices.',
+};
+
+export const VIDEO_IDEAS_TEXT_GEN_INPUT_PLACEHOLDER =
+  'Tell us about your channel niche and content goals...';
+
+export const VIDEO_IDEAS_GEN_BEST_PRACTICES = [
+  {
+    title: 'Align with audience interests',
+    description:
+      'Create videos that address the questions, problems, and interests of your target viewers.',
+  },
+  {
+    title: 'Leverage trending topics',
+    description:
+      'Connect your content to current events and trends to maximize discoverability and relevance.',
+  },
+  {
+    title: 'Mix content formats',
+    description:
+      'Balance tutorials, reviews, stories, and challenges to keep your content fresh and engaging.',
+  },
+  {
+    title: 'Create series potential',
+    description:
+      'Develop video ideas that can expand into multi-part series to encourage return viewers.',
+  },
+  {
+    title: 'Consider search intent',
+    description:
+      'Focus on topics with clear search intent that solve problems or answer specific questions.',
+  },
+  {
+    title: 'Add your unique perspective',
+    description:
+      'Put your personal spin on common topics to differentiate your content from competitors.',
+  },
+];
+
+export const VIDEO_IDEAS_GEN_FAQS = [
+  {
+    question: 'What is the AI Video Ideas Generator, and how can it help me?',
+    answer:
+      'The AI Video Ideas Generator is a creative tool that uses AI and content strategy insights to generate fresh video concepts. It helps creators overcome content blocks and build a consistent publishing schedule with ideas tailored to their niche.',
+  },
+  {
+    question:
+      'How does the AI Video Ideas Generator create effective concepts?',
+    answer:
+      'Our AI analyzes your channel niche, audience preferences, and trending topics. It then generates video ideas that combine high-potential concepts with your specific content focus.',
+  },
+  {
+    question: 'How many video ideas can I get at once?',
+    answer:
+      'The AI Video Ideas Generator provides ten unique video concepts per use. Upgrade to Boost for unlimited generations and more personalized recommendations.',
+  },
+  {
+    question: 'Can I use the AI Video Ideas Generator on mobile and desktop?',
+    answer:
+      'Yes! The AI Video Ideas Generator is available on both our web app and the vidIQ browser extension, making it easy to use on desktop or mobile devices.',
+  },
+  {
+    question: 'Why is having a consistent stream of video ideas important?',
+    answer:
+      'Maintaining a regular posting schedule is essential for channel growth. Our AI helps you build a content calendar with engaging ideas that keep viewers coming back and help attract new subscribers.',
+  },
+];
+

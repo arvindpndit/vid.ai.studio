@@ -9,7 +9,7 @@ const BestPractices = ({ bestPractices }: Props) => {
     <div className="mx-auto max-w-6xl p-2 mt-20 text-white">
       {/* Header */}
       <h2 className="mb-6 text-center text-3xl font-bold">
-        YouTube Title best practices:
+        Best practices to follow:
       </h2>
 
       {/* Grid Layout */}
