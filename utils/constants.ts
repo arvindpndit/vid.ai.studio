@@ -28,7 +28,7 @@ export const AI_TOOLS_MENU_LIST = [
   {
     title: 'Script & Description',
     tools: [
-      { name: 'Video Script Generator', href: '/video-script-generator' },
+      { name: 'Video Script Generator', href: '/youtube-script-generator' },
       { name: 'AI Description Generator', href: '/ai-description-generator' },
     ],
   },
@@ -317,7 +317,7 @@ export const KEYWORD_GEN_FAQS = [
 ];
 
 export const TAG_GEN_HERO_SECTION = {
-  btn_text: '🚀 AI YouTube Tag Generator',
+  btn_text: '✨ AI YouTube Tag Generator',
   title: 'Boost discoverability with optimized video tags',
   sub_title:
     'Generate high-performing YouTube tags instantly using AI. Improve SEO, reach the right audience, and increase video visibility with relevant and trending keywords.',
@@ -384,6 +384,77 @@ export const TAG_GEN_FAQS = [
     question: 'Why are optimized tags important for YouTube growth?',
     answer:
       'Well-chosen tags improve video SEO, help YouTube understand your content, and increase your chances of appearing in search results and suggested videos.',
+  },
+];
+
+export const SCRIPT_GEN_HERO_SECTION = {
+  btn_text: '✨ AI YouTube Script Generator',
+  title: 'Create engaging scripts for your videos instantly',
+  sub_title:
+    'Generate high-quality YouTube scripts using AI. Save time, enhance storytelling, and captivate your audience with structured and compelling video scripts.',
+};
+
+export const SCRIPT_GEN_INPUT_PLACEHOLDER =
+  'Enter your video topic or main idea...';
+
+export const SCRIPT_GEN_BEST_PRACTICES = [
+  {
+    title: 'Start with a strong hook',
+    description:
+      'Capture your audience’s attention in the first few seconds with an intriguing question, fact, or statement.',
+  },
+  {
+    title: 'Structure your content',
+    description:
+      'Organize your script with a clear introduction, main points, and a strong conclusion to keep viewers engaged.',
+  },
+  {
+    title: 'Use a conversational tone',
+    description:
+      'Write naturally and engage your audience as if you’re speaking directly to them.',
+  },
+  {
+    title: 'Include a call to action',
+    description:
+      'Encourage viewers to like, comment, subscribe, or take another action that benefits your channel.',
+  },
+  {
+    title: 'Optimize for retention',
+    description:
+      'Keep your script concise and engaging to maintain viewer interest and improve watch time.',
+  },
+  {
+    title: 'Refine with AI suggestions',
+    description:
+      'Leverage AI to enhance your script with better phrasing, pacing, and structure.',
+  },
+];
+
+export const SCRIPT_GEN_FAQS = [
+  {
+    question: 'What is the AI YouTube Script Generator, and how does it help?',
+    answer:
+      'The AI YouTube Script Generator helps content creators by generating structured and engaging video scripts based on their input, saving time and enhancing video quality.',
+  },
+  {
+    question: 'How does the AI generate effective scripts?',
+    answer:
+      'Our AI analyzes your topic, trending video formats, and audience engagement strategies to create compelling scripts tailored to your niche.',
+  },
+  {
+    question: 'Can I customize the generated script?',
+    answer:
+      'Yes! You can tweak, edit, and refine the generated script to match your personal style and channel’s tone.',
+  },
+  {
+    question: 'Is this tool suitable for all types of YouTube videos?',
+    answer:
+      'Absolutely! Whether you’re creating tutorials, vlogs, reviews, or storytelling content, our AI adapts to your video format.',
+  },
+  {
+    question: 'Does this AI work for non-English scripts?',
+    answer:
+      'Currently, our AI supports multiple languages, making it easy to generate scripts for diverse audiences worldwide.',
   },
 ];
 
