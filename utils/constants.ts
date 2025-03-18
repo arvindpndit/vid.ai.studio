@@ -29,7 +29,10 @@ export const AI_TOOLS_MENU_LIST = [
     title: 'Script & Description',
     tools: [
       { name: 'Video Script Generator', href: '/youtube-script-generator' },
-      { name: 'AI Description Generator', href: '/ai-description-generator' },
+      {
+        name: 'AI Description Generator',
+        href: '/video-description-generator',
+      },
     ],
   },
 ];
@@ -455,6 +458,78 @@ export const SCRIPT_GEN_FAQS = [
     question: 'Does this AI work for non-English scripts?',
     answer:
       'Currently, our AI supports multiple languages, making it easy to generate scripts for diverse audiences worldwide.',
+  },
+];
+
+export const VIDEO_DESC_GEN_HERO_SECTION = {
+  btn_text: '✨ AI YouTube Video Description Generator',
+  title: 'Craft compelling video descriptions instantly',
+  sub_title:
+    'Generate high-quality YouTube video descriptions using AI. Enhance discoverability, boost engagement, and attract more viewers with well-structured and persuasive descriptions.',
+};
+
+export const VIDEO_DESC_GEN_INPUT_PLACEHOLDER =
+  'Enter your video topic or main idea...';
+
+export const VIDEO_DESC_GEN_BEST_PRACTICES = [
+  {
+    title: 'Use Attention-Grabbing Headlines',
+    description:
+      'Start your description with a captivating headline that encourages viewers to click and watch.',
+  },
+  {
+    title: 'Include Relevant Keywords',
+    description:
+      'Add keywords related to your content to improve video discoverability in search results.',
+  },
+  {
+    title: 'Provide a Clear Summary',
+    description:
+      'Give viewers a concise overview of what your video covers to set expectations.',
+  },
+  {
+    title: 'Add a Call to Action',
+    description:
+      'Encourage viewers to like, comment, subscribe, or visit your website for more information.',
+  },
+  {
+    title: 'Optimize for Mobile',
+    description:
+      'Keep your description concise and easy to read on mobile devices to cater to a broader audience.',
+  },
+  {
+    title: 'Refine with AI Suggestions',
+    description:
+      'Leverage AI to enhance your description with better phrasing and structure.',
+  },
+];
+
+export const VIDEO_DESC_GEN_FAQS = [
+  {
+    question:
+      'What is the AI YouTube Video Description Generator, and how does it help?',
+    answer:
+      'The AI YouTube Video Description Generator helps creators by generating engaging and SEO-friendly video descriptions based on their input, improving video visibility and engagement.',
+  },
+  {
+    question: 'How does the AI generate effective descriptions?',
+    answer:
+      'Our AI analyzes your topic, trending keywords, and audience engagement strategies to create compelling descriptions tailored to your niche.',
+  },
+  {
+    question: 'Can I customize the generated description?',
+    answer:
+      'Yes! You can tweak, edit, and refine the generated description to match your personal style and channel’s tone.',
+  },
+  {
+    question: 'Is this tool suitable for all types of YouTube videos?',
+    answer:
+      'Absolutely! Whether you’re creating tutorials, vlogs, reviews, or storytelling content, our AI adapts to your video format.',
+  },
+  {
+    question: 'Does this AI work for non-English descriptions?',
+    answer:
+      'Currently, our AI supports multiple languages, making it easy to generate descriptions for diverse audiences worldwide.',
   },
 ];
 

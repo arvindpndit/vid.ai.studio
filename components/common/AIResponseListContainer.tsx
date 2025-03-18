@@ -17,7 +17,7 @@ const AIResponseListContainer = ({
       {answerResult.length > 0 && (
         <div className="mt-6 space-y-3">
           <h3 className="text-purple-400 font-medium text-lg">
-            Awesome Ideas:
+            Awesome Idea{answerResult.length == 1 ? '' : 's'}:
           </h3>
           <div className="space-y-2">
             {answerResult.map((answer: string, index: number) => (
