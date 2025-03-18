@@ -24,7 +24,7 @@ export async function POST(request: any) {
     // Create prompt for keyword generation
     const prompt = `You are a YouTube SEO expert specialized in keyword research and optimization.
         QUERY: ${query}
-        Generate 15 high-performing keywords and keyword phrases related to this query that would help optimize YouTube videos for search. Include a mix of broad, medium, and long-tail keywords.
+        Generate 10 high-performing keywords and keyword phrases related to this query that would help optimize YouTube videos for search. Include a mix of broad, medium, and long-tail keywords.
         IMPORTANT: Format your response with EXACTLY ONE keyword or keyword phrase per line, with NO quotation marks, NO brackets, NO numbering, and NO additional text. Keep each keyword or phrase concise and search-friendly.
         Example of CORRECT format:
         react tutorial

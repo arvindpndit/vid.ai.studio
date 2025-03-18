@@ -21,7 +21,7 @@ export const AI_TOOLS_MENU_LIST = [
   {
     title: 'SEO & Optimization',
     tools: [
-      { name: 'Keyword Generator', href: '/keyword-generator' },
+      { name: 'Keyword Generator', href: '/youtube-keyword-generator' },
       { name: 'YouTube Tag Generator', href: '/youtube-tag-generator' },
     ],
   },
@@ -244,6 +244,75 @@ export const VIDEO_IDEAS_GEN_FAQS = [
     question: 'Why is having a consistent stream of video ideas important?',
     answer:
       'Maintaining a regular posting schedule is essential for channel growth. Our AI helps you build a content calendar with engaging ideas that keep viewers coming back and help attract new subscribers.',
+  },
+];
+
+export const KEYWORD_GEN_HERO_SECTION = {
+  btn_text: '✨ AI YouTube Keyword Generator',
+  title: 'Discover relevant keywords that boost your video visibility',
+  sub_title:
+    'Generate high-performing YouTube keywords using AI, trending topic analysis, and SEO best practices.',
+};
+
+export const KEYWORD_GEN_INPUT_PLACEHOLDER =
+  'Enter your video topic or niche...';
+
+export const KEYWORD_GEN_BEST_PRACTICES = [
+  {
+    title: 'Use Long-Tail Keywords',
+    description: `Target specific phrases with lower competition to increase your video's visibility.`,
+  },
+  {
+    title: 'Leverage Trending Topics',
+    description:
+      'Connect your keywords to current events and trends to maximize relevance.',
+  },
+  {
+    title: 'Optimize for Search Intent',
+    description:
+      'Focus on keywords that solve problems or answer specific questions.',
+  },
+  {
+    title: 'Utilize Keyword Variations',
+    description:
+      'Experiment with synonyms and related terms to cover more search queries.',
+  },
+  {
+    title: 'Monitor Keyword Performance',
+    description:
+      'Track your keyword performance to refine your SEO strategy over time.',
+  },
+  {
+    title: 'Add Your Unique Twist',
+    description:
+      'Incorporate unique phrases or brand identifiers to differentiate your content.',
+  },
+];
+
+export const KEYWORD_GEN_FAQS = [
+  {
+    question: 'What is the AI Keyword Generator, and how can it help me?',
+    answer:
+      'The AI Keyword Generator is a tool that uses AI and SEO insights to generate relevant keywords. It helps creators optimize their video titles and descriptions for better visibility.',
+  },
+  {
+    question: 'How does the AI Keyword Generator create effective keywords?',
+    answer:
+      'Our AI analyzes your video topic, audience preferences, and trending keywords. It then generates keywords that combine high-potential terms with your specific content focus.',
+  },
+  {
+    question: 'How many keywords can I get at once?',
+    answer:
+      'The AI Keyword Generator provides ten unique keyword suggestions per use. Upgrade to Boost for unlimited generations and more personalized recommendations.',
+  },
+  {
+    question: 'Can I use the AI Keyword Generator on mobile and desktop?',
+    answer:
+      'Yes! The AI Keyword Generator is available on both our web app and the vidIQ browser extension, making it easy to use on desktop or mobile devices.',
+  },
+  {
+    question: 'Why is having the right keywords important?',
+    answer: `Using the right keywords is crucial for video visibility and SEO. Our AI helps you find keywords that attract more viewers and improve your video's ranking.`,
   },
 ];
 
