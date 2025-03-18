@@ -41,8 +41,8 @@ export async function POST(request: any) {
     const text = response.text();
 
     // Split the text into an array by newlines and filter out empty lines
-    const titles = text.split('\n').filter((line) => line.trim() !== '');
-    return NextResponse.json({ titles });
+    const data = text.split('\n').filter((line) => line.trim() !== '');
+    return NextResponse.json({ data });
   } catch (error) {
     console.error('Error querying Gemini API:', error);
     return NextResponse.json(

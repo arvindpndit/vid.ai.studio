@@ -11,7 +11,10 @@ export default function AITitleGenerator() {
   return (
     <div className="mt-20">
       <HeroSection heroText={heroText} />
-      <SearchContainer placeholder={placeholder} />
+      <SearchContainer
+        placeholder={placeholder}
+        url="/api/ai-title-generator"
+      />
       <BestPractices bestPractices={bestPractices} />
       <FAQ faqList={faqList} />
     </div>
