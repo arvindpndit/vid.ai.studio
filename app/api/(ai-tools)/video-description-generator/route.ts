@@ -1,3 +1,4 @@
+import { getDescriptionGenerationPrompt } from '@/utils/prompt';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
@@ -19,31 +20,10 @@ export async function POST(request: any) {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     // Updated prompt for generating a concise video description
-    const prompt = `You are a YouTube content expert. Based on the following topic, generate a compelling and SEO-friendly YouTube video description:
-    
-    QUERY: ${query}
-    
-    The description should:
-    - Be engaging and informative.
-    - Include key takeaways or highlights.
-    - Encourage engagement (likes, comments, and subscriptions).
-    - Be structured naturally, without timestamps.
-    - Optionally include a short call-to-action (CTA).
-
-    Example Output Format:
-    
-    "🚀 Want to master the art of off-road biking? In this video, we take the **Himalayan 450** on a thrilling adventure to test its power, suspension, and durability. 🏍️💨
-    
-    Whether you're a seasoned rider or just getting started, we'll break down its key features, handling, and real-world performance. Don't miss out on this exciting ride! 🌍🔥
-    
-    👉 Drop a comment below with your thoughts on the **Himalayan 450**!
-    👍 Like this video if you found it helpful!
-    🔔 Subscribe for more biking adventures and reviews!
-    
-    Generate a description in this format, making it concise, engaging, and SEO-friendly.`;
+    const prompt = getDescriptionGenerationPrompt(query);
 
     const result = await model.generateContent(prompt);
-    const response = await result.response;
+    const response = result.response;
     let text = response.text();
 
     text = text

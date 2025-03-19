@@ -1,3 +1,4 @@
+import { getTagGenerationPrompt } from '@/utils/prompt';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
@@ -22,25 +23,11 @@ export async function POST(request: any) {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     // Create prompt for video ideas
-    const prompt = `You are a YouTube creator and expert assistant specialized in content strategy.
-        QUERY: ${query}
-        Generate 10 relevant and trending YouTube tags related to this query in camel case.
-        IMPORTANT: Format your response with EXACTLY ONE tag per line, with NO quotation marks, NO brackets, NO commas, and NO additional text or spacing.
-        Example of CORRECT format:
-        webDesign
-        codingInterviews
-        seoTips
-        
-        Example of INCORRECT format:
-        ["webDesign"]
-        or
-        "webDesign"
-        or
-        1. webDesign`;
+    const prompt = getTagGenerationPrompt(query);
 
     // Generate content
     const result = await model.generateContent(prompt);
-    const response = await result.response;
+    const response = result.response;
     const text = response.text();
 
     // Split the text into an array by newlines and filter out empty lines

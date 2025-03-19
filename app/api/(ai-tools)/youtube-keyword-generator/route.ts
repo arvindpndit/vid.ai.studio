@@ -1,3 +1,4 @@
+import { getKeywordGenerationPrompt } from '@/utils/prompt';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
@@ -22,26 +23,10 @@ export async function POST(request: any) {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     // Create prompt for keyword generation
-    const prompt = `You are a YouTube SEO expert specialized in keyword research and optimization.
-        QUERY: ${query}
-        Generate 10 high-performing keywords and keyword phrases related to this query that would help optimize YouTube videos for search. Include a mix of broad, medium, and long-tail keywords.
-        IMPORTANT: Format your response with EXACTLY ONE keyword or keyword phrase per line, with NO quotation marks, NO brackets, NO numbering, and NO additional text. Keep each keyword or phrase concise and search-friendly.
-        Example of CORRECT format:
-        react tutorial
-        learn react js
-        react for beginners
-        how to build react app
-        react vs angular
-        
-        Example of INCORRECT format:
-        ["react tutorial", "learn react js"]
-        or
-        "react tutorial"
-        or
-        1. react tutorial`;
+    const prompt = getKeywordGenerationPrompt(query);
     // Generate content
     const result = await model.generateContent(prompt);
-    const response = await result.response;
+    const response = result.response;
     const text = response.text();
 
     // Split the text into an array by newlines and filter out empty lines

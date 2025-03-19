@@ -1,3 +1,4 @@
+import { getChannelNameGenerationPrompt } from '@/utils/prompt';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
@@ -23,25 +24,11 @@ export async function POST(request: any) {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     // Create prompt with explicit instructions about formatting
-    const prompt = `You are a YouTube creator and expert assistant specialized in content strategy.
-    QUERY: ${query}
-    Generate 10 catchy, memorable, and brand-friendly YouTube channel names related to this query.
-    EXTREMELY IMPORTANT: Format your response with EXACTLY ONE channel name per line, with NO quotation marks, NO brackets, NO commas, and NO additional text. DO NOT return JSON or an array format under any circumstances.
-    Example of CORRECT format:
-    TechTalks Daily
-    CodeMaster
-    Digital Nomad Life
-    
-    Example of INCORRECT format:
-    ["TechTalks Daily", "CodeMaster"]
-    or
-    "TechTalks Daily"
-    or
-    1. TechTalks Daily`;
+    const prompt = getChannelNameGenerationPrompt(query);
 
     // Generate content
     const result = await model.generateContent(prompt);
-    const response = await result.response;
+    const response = result.response;
     const text = response.text();
 
     // Process the text to ensure proper formatting

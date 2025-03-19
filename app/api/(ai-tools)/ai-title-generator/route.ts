@@ -1,3 +1,4 @@
+import { getTitleGenerationPrompt } from '@/utils/prompt';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
@@ -22,22 +23,10 @@ export async function POST(request: any) {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     // Create prompt
-    const prompt = `You are a YouTube creator and expert assistant specialized in content strategy.
-      QUERY: ${query}
-      Generate 10 highly clickable, SEO-optimized YouTube video titles related to this query.
-      IMPORTANT: Format your response as a JavaScript array of strings ONLY, with NO additional text, explanations, or formatting. Do not include any JSON syntax, backticks, or string indicators.
-      Example of CORRECT format:
-      React vs Next.js: ULTIMATE Showdown!
-      React OR Next.js? Choose The RIGHT One!
-      Next.js vs React: Which Is FASTER? (Test)
-      Example of INCORRECT format:
-      ["React vs Next.js: ULTIMATE Showdown!",
-      "React OR Next.js? Choose The RIGHT One!"]
-      or
-      '''React vs Next.js: ULTIMATE Showdown!'''`;
+    const prompt = getTitleGenerationPrompt(query);
     // Generate content
     const result = await model.generateContent(prompt);
-    const response = await result.response;
+    const response = result.response;
     const text = response.text();
 
     // Split the text into an array by newlines and filter out empty lines
