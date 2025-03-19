@@ -13,7 +13,7 @@ export const AI_TOOLS_MENU_LIST = [
   {
     title: 'Content Creation',
     tools: [
-      // { name: 'Content Generator', href: '/content-generator' },
+      { name: 'AI Content Generator', href: '/ai-content-generator' },
       // { name: 'ChatGPT for YouTubers', href: '/chatgpt-for-youtubers' },
       { name: 'YouTube Video Ideas', href: '/youtube-video-ideas' },
     ],
@@ -530,6 +530,76 @@ export const VIDEO_DESC_GEN_FAQS = [
     question: 'Does this AI work for non-English descriptions?',
     answer:
       'Currently, our AI supports multiple languages, making it easy to generate descriptions for diverse audiences worldwide.',
+  },
+];
+
+export const VIDEO_GEN_HERO_SECTION = {
+  btn_text: '✨ AI YouTube Video Content Generator',
+  title: 'Generate Titles, Descriptions, Scripts & Keywords in One Click!',
+  sub_title:
+    'Create engaging YouTube content effortlessly with AI-powered title, description, script, and keyword generation—all in one place!',
+};
+
+export const VIDEO_TEXT_GEN_INPUT_PLACEHOLDER = 'Describe your video idea...';
+
+export const VIDEO_GEN_BEST_PRACTICES = [
+  {
+    title: 'Understand your audience',
+    description:
+      'Use terms, phrases, and language that resonate with your target audience.',
+  },
+  {
+    title: 'Trigger emotional curiosity',
+    description:
+      'Craft titles and descriptions that spark interest and make viewers want to click.',
+  },
+  {
+    title: 'Use relevant keywords',
+    description:
+      'Optimize your content with popular keywords to enhance discoverability.',
+  },
+  {
+    title: 'Be consistent',
+    description:
+      'Maintain a recognizable style and theme for better brand recall.',
+  },
+  {
+    title: 'Write compelling scripts',
+    description:
+      'Use storytelling techniques to make your videos engaging and immersive.',
+  },
+  {
+    title: 'Structure your content effectively',
+    description:
+      'Organize your script to keep viewers engaged, ensuring a smooth flow from intro to call-to-action.',
+  },
+];
+
+export const VIDEO_GEN_FAQS = [
+  {
+    question: 'What does the AI Video Content Generator do?',
+    answer:
+      'This tool generates optimized YouTube video titles, descriptions, scripts, and keywords using AI. It helps creators save time and boost engagement.',
+  },
+  {
+    question: 'How does it create content for my video?',
+    answer:
+      "Our AI analyzes your video idea, audience, and YouTube trends to generate content that's optimized for reach and engagement.",
+  },
+  {
+    question: 'How many content suggestions can I get at once?',
+    answer:
+      'You can generate multiple title, description, script, and keyword suggestions per request. Upgrade for unlimited generations and advanced personalization.',
+  },
+  {
+    question: 'Can I customize the AI-generated content?',
+    answer:
+      'Absolutely! You can tweak and refine the generated content to match your unique style and branding.',
+  },
+  {
+    question: 'Why is AI-generated content useful for YouTube creators?',
+    answer:
+      'AI helps streamline content creation, making it easier to craft compelling videos that attract views and keep audiences engaged.',
   },
 ];
 

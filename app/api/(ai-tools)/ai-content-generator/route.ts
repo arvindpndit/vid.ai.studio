@@ -50,7 +50,7 @@ export async function POST(request: any) {
       processText(scriptGenPrompt, true),
     ]);
 
-    return NextResponse.json({ title, keyword, description, script });
+    return NextResponse.json({ data: { title, keyword, description, script } });
   } catch (error) {
     console.error('Error querying Gemini API:', error);
     return NextResponse.json(

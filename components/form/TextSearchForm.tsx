@@ -9,7 +9,7 @@ const TextSearchForm = ({
   loading,
 }: any) => {
   return (
-    <div className="flex items-center border-dashed border border-purple-800 justify-between space-x-2 rounded-2xl bg-[#0b0d13] p-2">
+    <div className="flex items-center border-dashed border border-purple-800 hover:border-purple-600 justify-between space-x-2 rounded-2xl bg-[#0b0d13] p-2 transition-all duration-300">
       <input
         type="text"
         placeholder={placeholder}

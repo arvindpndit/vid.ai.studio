@@ -1,7 +1,7 @@
 'use client';
 import { Copy, Check } from 'lucide-react';
 
-const AIResponseListContainer = ({
+const SingleResponseListContainer = ({
   error,
   answerResult,
   copyToClipboard,
@@ -46,5 +46,5 @@ const AIResponseListContainer = ({
   );
 };
 
-export default AIResponseListContainer;
+export default SingleResponseListContainer;
 

@@ -1,15 +1,17 @@
 'use client';
 import React, { useState } from 'react';
-import AIResponseListContainer from './AIResponseListContainer';
+import SingleResponseListContainer from './container/SingleResponseListContainer';
 import TextSearchForm from '../form/TextSearchForm';
 import useAnswer from '@/hooks/useAnswer';
+import MultipleResponseListsContainer from './container/MultipleResponseListsContainer';
 
 interface Props {
   placeholder: string;
   url: string;
+  showAll?: boolean;
 }
 
-const SearchContainer = ({ placeholder, url }: Props) => {
+const SearchContainer = ({ placeholder, url, showAll = false }: Props) => {
   const {
     answerResult,
     query,
@@ -40,12 +42,21 @@ const SearchContainer = ({ placeholder, url }: Props) => {
             </span>
           </div>
           {/* Render response */}
-          <AIResponseListContainer
-            error={error}
-            answerResult={answerResult}
-            copyToClipboard={copyToClipboard}
-            copiedIndex={copiedIndex}
-          />
+          {!showAll ? (
+            <SingleResponseListContainer
+              error={error}
+              answerResult={answerResult}
+              copyToClipboard={copyToClipboard}
+              copiedIndex={copiedIndex}
+            />
+          ) : (
+            <MultipleResponseListsContainer
+              error={error}
+              answerResult={answerResult}
+              copyToClipboard={copyToClipboard}
+              copiedIndex={copiedIndex}
+            />
+          )}
         </div>
       </div>
     </div>
