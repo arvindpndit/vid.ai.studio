@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Menu, ChevronDown, ChevronRight } from 'lucide-react';
+import { Menu, ChevronDown, ChevronRight, Link } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { AI_TOOLS_MENU_LIST as AIToolsList } from '@/utils/constants';
@@ -21,9 +21,6 @@ const MobileMenu = () => {
       {/* Sidebar Menu */}
       <SheetContent side="left" className="w-64 p-6 bg-gray-950 border-0">
         <nav className="flex flex-col space-y-4">
-          <a href="#" className="hover:text-gray-600">
-            Home
-          </a>
           <a href="#" className="hover:text-gray-600">
             Features
           </a>
@@ -64,14 +61,11 @@ const MobileMenu = () => {
             </div>
           )}
 
-          <a href="#" className="hover:text-gray-600">
-            Entertainment
+          <a href="/trending-videos/IN" className="hover:text-gray-600">
+            Trending Videos
           </a>
           <a href="#" className="hover:text-gray-600">
             Top YT channels
-          </a>
-          <a href="#" className="hover:text-gray-600">
-            Contact
           </a>
         </nav>
       </SheetContent>

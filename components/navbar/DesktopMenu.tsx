@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { AI_TOOLS_MENU_LIST as AIToolsList } from '@/utils/constants';
+import Link from 'next/link';
 
 const DesktopMenu = () => {
   const [hovering, setHovering] = useState<boolean>(false);
@@ -59,9 +60,9 @@ const DesktopMenu = () => {
         </div>
       </div>
 
-      <a href="#" className="hover:text-gray-600">
-        Entertainment
-      </a>
+      <Link href="/trending-videos/IN" className="hover:text-gray-600">
+        Trending Videos
+      </Link>
       <a href="#" className="hover:text-gray-600">
         Top YT channels
       </a>

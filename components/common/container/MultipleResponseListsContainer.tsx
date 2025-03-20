@@ -17,7 +17,7 @@ const MultipleResponseListsContainer = ({
         <div className="mt-4 text-red-500 text-center text-sm">{error}</div>
       )}
       {/* Iterate over answerResult keys */}
-      {answerResult && (
+      {answerResult.length > 0 && (
         <div className="mt-6 space-y-6">
           {/* Title with navigation */}
           {answerResult.title && Array.isArray(answerResult.title) && (
