@@ -9,7 +9,6 @@ const MultipleResponseListsContainer = ({
   copiedIndex,
 }: any) => {
   const [titleIndex, setTitleIndex] = useState(0);
-
   return (
     <>
       {/* Error display */}
@@ -17,7 +16,7 @@ const MultipleResponseListsContainer = ({
         <div className="mt-4 text-red-500 text-center text-sm">{error}</div>
       )}
       {/* Iterate over answerResult keys */}
-      {answerResult.length > 0 && (
+      {answerResult && (
         <div className="mt-6 space-y-6">
           {/* Title with navigation */}
           {answerResult.title && Array.isArray(answerResult.title) && (
@@ -35,7 +34,7 @@ const MultipleResponseListsContainer = ({
                       (prev) => (prev + 1) % answerResult.title.length,
                     )
                   }
-                  className="ml-2 p-1.5 rounded-xl text-gray-400 hover:text-white hover:bg-purple-900/50 transition-colors"
+                  className="ml-2 py-1 px-2 rounded-xl text-gray-400 hover:text-white hover:bg-purple-900/50 transition-colors"
                   title="Next Title"
                 >
                   Change
@@ -88,11 +87,11 @@ const MultipleResponseListsContainer = ({
                         </div>
                       ))
                     ) : (
-                      <div className="group flex items-start justify-between p-3 rounded-2xl bg-[#131726] border border-purple-900/50 hover:border-purple-700 transition-all duration-300">
-                        <p className="text-gray-200">{values}</p>
+                      <div className="group flex items-start justify-between p-3 rounded-2xl bg-[#131726] border border-purple-900/50 hover:border-purple-700 transition-all duration-300 relative">
+                        <p className="text-gray-200 ">{values}</p>
                         <button
                           onClick={() => copyToClipboard(values, key)}
-                          className="ml-2 p-1.5 rounded-md text-gray-400 hover:text-white hover:bg-purple-900/50 transition-colors"
+                          className="absolute right-2.5 top-2.5 ml-2 p-1.5 rounded-md text-gray-400 hover:text-white hover:bg-purple-900/50 transition-colors bg-gray-800"
                           title="Copy to clipboard"
                         >
                           {copiedIndex === key ? (

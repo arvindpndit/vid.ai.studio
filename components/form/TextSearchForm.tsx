@@ -15,6 +15,9 @@ const TextSearchForm = ({
         placeholder={placeholder}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') handleSubmit(e);
+        }}
         className="w-full bg-transparent text-white placeholder-gray-400 outline-none px-3"
       />
       <button

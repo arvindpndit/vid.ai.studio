@@ -3,6 +3,7 @@ import VideoContainer from '@/components/common/container/VideoContainer';
 import { CountrySelector } from '@/components/form/CountrySelector';
 import { getYoutubeTrendingVideos } from '@/lib/actions/youtube-actions';
 import { TRENDING_VIDEO_HERO_SECTION as heroText } from '@/utils/constants';
+import Link from 'next/link';
 
 const TrendingVideos = async ({ countryCode }: any) => {
   const res = await getYoutubeTrendingVideos(countryCode);
@@ -14,7 +15,13 @@ const TrendingVideos = async ({ countryCode }: any) => {
       <CountrySelector />
       <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
         {videos?.map((video: any) => (
-          <VideoContainer video={video} key={video?.etag} />
+          <Link
+            href={`https://www.youtube.com/watch?v=${video?.id}`}
+            key={video?.etag}
+            target="_blank"
+          >
+            <VideoContainer video={video} />
+          </Link>
         ))}
       </div>
     </div>

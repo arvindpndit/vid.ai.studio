@@ -23,12 +23,12 @@ const SingleResponseListContainer = ({
             {answerResult.map((answer: string, index: number) => (
               <div
                 key={index}
-                className="group flex items-center justify-between p-3 rounded-2xl bg-[#131726] border border-purple-900/50 hover:border-purple-700 transition-all duration-300"
+                className="group flex items-center justify-between p-3 rounded-2xl bg-[#131726] border border-purple-900/50 hover:border-purple-700 transition-all duration-300 relative"
               >
-                <p className="text-gray-200">{answer}</p>
+                <p className="text-gray-200 ">{answer}</p>
                 <button
                   onClick={() => copyToClipboard(answer, index)}
-                  className="ml-2 p-1.5 rounded-md text-gray-400 hover:text-white hover:bg-purple-900/50 transition-colors"
+                  className="absolute right-2.5  top-2.5 ml-2 p-1.5 rounded-md text-gray-400  hover:text-white hover:bg-purple-900/50 transition-colors bg-gray-800"
                   title="Copy to clipboard"
                 >
                   {copiedIndex === index ? (

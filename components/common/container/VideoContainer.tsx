@@ -2,6 +2,7 @@ import { formatViewsCount, timeAgo } from '@/utils/data-manipulation';
 import Image from 'next/image';
 import React from 'react';
 import { Dot } from 'lucide-react';
+import videoPlaceHolder from '@/public/VideoPlaceholder.png';
 
 const VideoContainer = ({ video }: any) => {
   const { snippet, statistics } = video;
@@ -12,12 +13,14 @@ const VideoContainer = ({ video }: any) => {
       {/* Maintain 16:9 aspect ratio */}
       <div className="relative w-full aspect-[16/9]">
         <Image
-          src={thumbnails?.high?.url}
+          src={thumbnails?.high?.url || videoPlaceHolder}
           alt="thumbnail"
           fill
           className="rounded-xl hover:rounded-none object-cover transition-all duration-300"
           priority={false} // Helps with lazy loading
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          placeholder="blur"
+          blurDataURL={videoPlaceHolder.src}
         />
       </div>
       <div className="mt-3">
